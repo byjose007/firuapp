@@ -1,0 +1,46 @@
+<section class="blog__post-area-three">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="section__title mb-40">
+          <span class="sub-title">News & Blogs</span>
+          <h2 class="title">Our Recent Articles</h2>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="view__all-btn text-end mb-40">
+          <a routerLink="/blog" class="btn">See All Posts</a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div *ngFor="let post of blogPosts" class="col-lg-4 col-md-6">
+        <div class="blog__post-item-three shine-animate-item">
+          <div class="blog__post-thumb-three shine-animate">
+            <a routerLink="/blog-details"
+              ><img [src]="post.image" [alt]="post.title"
+            /></a>
+            <span class="post-tag" *ngFor="let category of post.categories">{{
+              category
+            }}</span>
+          </div>
+          <div class="blog__post-content-three">
+            <div class="blog__post-meta">
+              <ul class="list-wrap">
+                <li>{{ post.date }}</li>
+                <li>
+                  by <a href="#">{{ post.author }}</a>
+                </li>
+              </ul>
+            </div>
+            <h2 class="title">
+              <a routerLink="/blog-details">{{ post.title }}</a>
+            </h2>
+            <p>{{ post.excerpt }}</p>
+            <a routerLink="/blog-details" class="btn btn-two">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

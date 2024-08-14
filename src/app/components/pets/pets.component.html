@@ -1,0 +1,42 @@
+<section class="animal__area-two">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-8">
+        <div class="section__title white-title text-center mb-40">
+          <h2 class="title">Available Pets For Adoption</h2>
+          <p>
+            We will work with you to develop individualised care plans,
+            including management chronic diseases.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div
+        *ngFor="let pet of pets"
+        class="col-xl-3 col-lg-4 col-md-6 col-sm-10"
+      >
+        <div class="animal__item animal__item-two shine-animate-item">
+          <div class="animal__thumb animal__thumb-two shine-animate">
+            <a routerLink="/animal-details"
+              ><img [src]="pet.image" [alt]="pet.name"
+            /></a>
+            <a routerLink="/animal-details" class="wishlist"
+              ><i class="far fa-heart"></i
+            ></a>
+          </div>
+          <div class="animal__content animal__content-two">
+            <h4 class="title">
+              <a routerLink="/animal-details">{{ pet.name }}</a>
+            </h4>
+            <ul class="pet-info list-wrap">
+              <li>Gender: {{ pet.gender }}</li>
+              <li>Breed: {{ pet.breed }}</li>
+            </ul>
+            <p class="location">{{ pet.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

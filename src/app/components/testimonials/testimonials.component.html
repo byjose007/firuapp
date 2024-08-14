@@ -1,0 +1,42 @@
+<section class="testimonial__area-three">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-xl-5 col-lg-6 col-md-10">
+        <div class="testimonial__img-two">
+          <!-- Add testimonial image content -->
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-6">
+        <div class="testimonial__content-three">
+          <div class="section__title mb-40">
+            <span class="sub-title">Testimonials</span>
+            <h2 class="title">
+              Don't Just Take it From Us, Hear What Our Clients Say:
+            </h2>
+          </div>
+          <div class="testimonial-active-three">
+            <div
+              *ngFor="let testimonial of testimonials"
+              class="testimonial__item-three"
+            >
+              <div class="testimonial__item-three-top">
+                <div class="testimonial__author-three">
+                  <img [src]="testimonial.image" [alt]="testimonial.author" />
+                </div>
+                <div class="content">
+                  <p>"{{ testimonial.content }}"</p>
+                </div>
+              </div>
+              <div class="testimonial__item-three-bottom">
+                <div class="testimonial__author-info">
+                  <h4 class="title">{{ testimonial.author }}</h4>
+                  <span>{{ testimonial.role }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

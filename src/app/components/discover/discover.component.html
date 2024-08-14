@@ -1,0 +1,31 @@
+<section class="discover__area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-8">
+        <div class="section__title text-center mb-40">
+          <span class="sub-title">Discover Our Cities</span>
+          <h2 class="title">Find Pets by state or province</h2>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse amily
+            and deserves ets are the best care.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row gutter-24">
+      <div *ngFor="let city of cities" class="col-lg-6">
+        <div class="discover__item">
+          <div class="discover__item-img">
+            <img [src]="city.image" [alt]="city.name" />
+          </div>
+          <div class="discover__item-content">
+            <h2 class="title">
+              <a routerLink="/contact">{{ city.name }}</a>
+            </h2>
+            <span>{{ city.petCount }} Pets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
